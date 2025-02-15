@@ -1,0 +1,441 @@
+nav{
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+nav h2{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(rgb(184, 207, 54), rgb(52, 172, 90));
+    background-clip: text;
+    color: transparent;
+}
+.anchor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+.anchor a{
+    font-size: 21px;
+    color: white;
+    text-decoration: none;
+    transition: all 1s;
+    cursor: pointer;
+    position: relative;
+}
+input{
+    display: none;
+}
+label{
+    display: none;
+}
+.anchor a::after{
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 0%;
+    left:0px;
+    bottom: 0px;
+    transition: all 1s;
+    z-index: -1;
+}
+.anchor a::before{
+    content: "";
+    position: absolute;
+    height: 0%;
+    width: 0%;
+    transition: all 1s;
+    z-index: -1;
+}
+.anchor a:hover::after,.anchor a:hover::before{
+    width: 100%;
+    height: 100%;
+    background-color:forestgreen;
+}
+input:checked~.anchor{
+    left: 0;
+}
+
+.homeimg{
+    height: 100vh;
+    background-image: url("https://media.istockphoto.com/id/637140248/photo/oil-and-gas-industry-refinery-at-sunset-factory.jpg?s=612x612&w=0&k=20&c=I4vNxNgGPOujdr5QkYYZmfmdO4u1cUEs1l5MtePwPuI=");
+    width:100%;
+    background-repeat:no repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutpg{
+    height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    gap:10px;
+
+}
+.aboutimg{
+    animation-name:card;
+    animation-duration: 2s;
+    position:relative;
+    animation-iteration-count: 2;
+}
+@keyframes card{
+    from{
+         right:-70%;
+        
+
+    }
+    to{
+        right:0%;
+
+    }
+}
+.aboutcontent{
+    animation-name:car;
+    animation-duration: 2s;
+    position:relative;
+    animation-iteration-count: 2;
+}
+@keyframes car{
+    from{
+         left:-70%;
+        
+
+    }
+    to{
+        left:0%;
+
+    }
+}
+
+.aboutcontent{
+    width: 500px;
+}
+.aboutimg{
+    width:500px;
+    height:400px;
+}
+.aboutimg img{
+    width: 100%;
+    height: 100%;
+}
+.popular{
+    height: 100vh;
+     display: flex;
+     justify-content:space-evenly;
+     align-items: center;
+     gap:10px;
+      
+
+}
+.popularimg img{
+    width:250px;
+    height:250px;
+    border-radius:10px 0px 10px 0px;
+    box-shadow: 5px 5px 5px gray; 
+
+    
+}
+.popularimg h2{
+    text-align: center;
+}
+
+.popularimg:hover img{
+    height: 300px;
+   /* transform: skewx(20deg,20deg); */
+}
+.popularimg:hover h2{
+    display: none;
+
+}
+.popularimg{
+    animation-name:topic;
+    animation-duration: 2s;
+    position:relative;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: 2; */
+}
+@keyframes topic{
+    from{
+        bottom :-50px;
+        opacity: 0;
+        
+
+    }
+    to{
+        bottom:0%;
+
+    }
+}   
+
+.contact {
+    height: 90vh;
+    background-image: url(https://furtherafrica.com/content-files/uploads/2024/07/manufacturing001-discord.jpg);
+    background-size: cover;
+    padding: 20px
+}
+
+
+
+.contact h1 {
+    background-image: linear-gradient(blue, rgb(185, 16, 252));
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+.contact h3 {
+    color: black;
+    text-align: center;
+}
+
+.contactus {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.contactcon {
+    width: 30%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.dark {
+    width: 100%;
+    display: flex;
+    gap: 20px
+}
+
+.dark p {
+    font-size: 18px;
+    color: lightcyan
+    background-color:blue;
+}
+
+.dark>div {
+    font-size: 25px;
+    padding-top: 13px;
+    background-image: linear-gradient(rgb(255, 115, 0), #220080);
+    background-clip: text;
+    color: transparent;
+
+}
+
+.icons {
+
+    bottom: 20px;
+    letter-spacing: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+.one{
+    background-image: linear-gradient(rgb(59, 108, 224), rgb(23, 203, 143));
+    background-clip: text;
+    color: transparent;
+}
+
+.two {
+    background-image: linear-gradient(rgb(87, 0, 128), rgb(7, 180, 122));
+    background-clip: text;
+    color: transparent
+}
+
+.three {
+    background-image: linear-gradient(rgb(240, 52, 105), rgb(83, 4, 230));
+    background-clip: text;
+    color: transparent
+}
+
+.four {
+    background-image: linear-gradient(rgb(50, 12, 238), rgb(0, 128, 111, 0.856));
+    background-clip: text;
+    color: transparent
+}
+.icons i:hover{
+       /* background-color: blue; */
+       transform: scaley(1.1);
+}
+
+
+form {
+    width: 35%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+form:hover{
+   
+    color:black;
+    transform: scaley(1.1);
+
+}
+
+
+.map {
+    width: 30%;
+    height: 300px;
+
+}
+
+.first,
+.last {
+    display: inline-block;
+}
+
+.first {
+    padding-bottom: 5px;
+}
+
+.last {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+}
+
+form button {
+    border: none;
+    border-radius: 4px;
+    width: 20%;
+    background-color: blue;
+    padding: 8px;
+    color: white
+}
+
+form button:hover {
+    background-color: gray;
+    border-radius: 10px 0px 10px 0px;
+    box-shadow: 2px 2px 2px white;
+}
+.contactcon{
+    animation-name:box;
+    animation-duration: 2s;
+    position:relative;
+    animation-iteration-count: 2;
+}
+@keyframes box{
+    from{
+         left:-30%;
+        
+
+    }
+    to{
+        left:0%;
+
+    }
+}
+form{
+    animation-name:con;
+    animation-duration: 2s;
+    position:relative;
+    animation-iteration-count:2;
+}
+@keyframes con{
+    from{
+         left:-30%;
+        
+
+    }
+    to{
+        left:0%;
+    }
+}
+.map{
+    animation-name:cat;
+    animation-duration: 2s;
+    position:relative;
+    animation-iteration-count: 2;
+}
+@keyframes cat{
+    from{
+         left:-30%;
+        
+
+    }
+    to{
+        left:0%;
+
+
+    }
+}
+@media only screen and (max-width:600px){
+    .anchor{
+        border-radius:15px;
+        position:fixed;
+        background-color: rgb(51, 129, 153);
+        left:100%;
+        top:55px;
+        width:100%;
+        height:60vh;
+        flex-direction: column;
+        gap:10px;
+        transition: all 1s;
+        /* padding-left:30px; */
+        /* padding-right:30px; */
+    }
+    label{
+        display: flex;
+    }
+    input{
+        display: none;
+    }
+    .homeimg{
+        width:1100px;
+    }
+    .aboutpg{
+        width: 1000px;
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutcontent{
+        width: 100%;
+    }
+    .aboutimg{
+        width: 100%;
+    }
+    .popular{
+        width: 1000px;
+        height: 150vh;
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .contact{
+        height: 200vh;
+        width: 1000px;
+       
+    }
+    .contactus{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
